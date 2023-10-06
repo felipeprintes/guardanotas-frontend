@@ -4,19 +4,17 @@ import {useState} from 'react'
 function TextField(){
 
     const [texto, setTexto] = useState('');
-    const [atividade, setAtividade] = useState(''); // Estado para armazenar a atividade digitada
+    // const [atividade, setAtividade] = useState(''); // Estado para armazenar a atividade digitada
     const [atividades, setAtividades] = useState([]); // Estado para armazenar a lista de atividades
 
-    const adicionarAtividade = () => {
-        console.log('Entrei aqui')
-        console.log(atividade)
-        if (atividade.trim() !== '') {
-            console.log(atividade.length)
-          // Verifica se a atividade não está em branco
-          setAtividades([...atividades, atividade]); // Adiciona a atividade à lista
-          setAtividade(''); // Limpa o campo de texto
+    const activity = (evento) =>{
+        evento.preventDefault()
+        // setAtividade(evento.target[0].value)
+        const conteudo = evento.target[0].value
+        if(conteudo !== ''){
+            setAtividades([...atividades,conteudo])
         }
-      };
+    }
 
     const handleChange = (e) => {
         // Atualiza o estado com o texto digitado
@@ -25,26 +23,31 @@ function TextField(){
         }
       };
 
+    // const [textoDigitado, setTextoDigitado] = useState('')
     return (
         <div className="writeArea">
-            <form>
+            <form onSubmit={activity}>
                 <label className="writeArea-label">
                     <input type="text" 
                     name="name" 
                     maxLength={10} 
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    // onBlur={evento => setTextoDigitado(evento.target.value)} 
                     placeholder='Guarde sua ideia com a gente'/>
                 </label>
                 <p>{texto.length}/10</p>
-                {/* comentado para adicionar depois type="submit" */}
-                <input onClick={adicionarAtividade} className='writeArea-button' value="Submit" />
+                <input className='writeArea-button' value="Submit" type="submit"/>
             </form>
+
+            {/* <div className='card'>
+                <p>{atividade}</p>
+            </div> */}
             
             <div>
                 {atividades.map((item, index) => (
                     <div key={index} className='card'>
                         {item}
-                        {console.log('teste')} 
+                        {console.log(item)}
                     </div>
                 ))}
             </div>
