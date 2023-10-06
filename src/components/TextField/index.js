@@ -43,7 +43,7 @@ function TextField(){
                 <p>{atividade}</p>
             </div> */}
             
-            <div>
+            <div className='atividades'>
                 {atividades.map((item, index) => (
                     <div key={index} className='card'>
                         {item}
