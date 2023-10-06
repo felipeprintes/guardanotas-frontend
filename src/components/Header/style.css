@@ -1,0 +1,11 @@
+/* .header{
+    border: 2px solid green;
+} */
+
+.header-informText{
+    color: rgba(136, 155, 201, 0.871);
+    font-size: 22px;
+    font-weight: bolder;
+    font-family:fantasy;
+    margin-bottom: -45px;
+}

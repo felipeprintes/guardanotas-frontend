@@ -1,0 +1,70 @@
+.writeArea-label{
+    /* border: 2px solid green; */
+    /* background-color: green; */
+}
+
+.writeArea{
+    width: 70vw;
+    /* display: flex; */
+    /* flex-direction:column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* border: 2px solid green; */
+}
+
+form{
+    display: flex;
+    /* border: 2px solid red; */
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input[type=text]{
+    width: 57vw;
+    margin-right: 15px;
+    background-color: rgb(39, 39, 44);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, background-color 0.3s;
+    color: white;
+    font-weight: bold;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Cor da borda quando em foco */
+    background-color: rgb(57, 57, 61); /* Cor de fundo quando em foco */
+}
+
+p {
+    color: white;
+    font-weight: bold;
+}
+
+/* input[type="text"]::placeholder {
+    color: white;
+    font-weight: bold;
+} */
+
+.card{
+    height: 120px;
+    width: 80px;
+}
+
+.writeArea-button{
+    width: 100px;
+    background-color: rgba(100, 102, 233);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+}
+
+.writeArea-button:hover {
+    background-color: #0056b3; /* Cor de fundo quando hover */
+}
+
+
+
