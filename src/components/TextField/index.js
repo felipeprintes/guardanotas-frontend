@@ -38,10 +38,6 @@ function TextField(){
                 <p>{texto.length}/10</p>
                 <input className='writeArea-button' value="Submit" type="submit"/>
             </form>
-
-            {/* <div className='card'>
-                <p>{atividade}</p>
-            </div> */}
             
             <div className='atividades'>
                 {atividades.map((item, index) => (
