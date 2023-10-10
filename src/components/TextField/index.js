@@ -5,6 +5,7 @@ function TextField(){
 
     const [texto, setTexto] = useState('');
     const [atividades, setAtividades] = useState([]); // Estado para armazenar a lista de atividades
+    const limitText = 220
 
     const activity = (evento) =>{
         evento.preventDefault()
@@ -16,7 +17,8 @@ function TextField(){
 
     const handleChange = (e) => {
         // Atualiza o estado com o texto digitado
-        if(e.target.value.length <=10){
+        
+        if(e.target.value.length <=limitText){
             setTexto(e.target.value);
         }
       };
@@ -27,19 +29,19 @@ function TextField(){
                 <label className="writeArea-label">
                     <input type="text" 
                     name="name" 
-                    maxLength={10} 
+                    maxLength={limitText} 
                     onChange={handleChange}
                     // onBlur={evento => setTextoDigitado(evento.target.value)} 
                     placeholder='Guarde sua ideia com a gente'/>
                 </label>
-                <p>{texto.length}/10</p>
+                <p>{texto.length}/{limitText}</p>
                 <input className='writeArea-button' value="Submit" type="submit"/>
             </form>
             
             <div className='atividades'>
                 {atividades.map((item, index) => (
                     <div key={index} className='card'>
-                        {item}
+                        <p className='atividades-conteudo'>{item}</p>
                         <div className='card-buttons'>
                             <button className='editar'>Editar</button>
                             <button className='excluir'>Excluir</button>

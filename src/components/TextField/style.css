@@ -72,6 +72,7 @@ p {
     padding: 5px;
     margin-bottom: 10px;
     color: white;
+    justify-content: space-between;
 }
 
 .atividades{
@@ -83,10 +84,10 @@ p {
     grid-gap: 15px;
 }
 
+
+
 .card-buttons{
-    display: flex;
     float: right;
-    margin-top: 75%;
 }
 
 .editar {
