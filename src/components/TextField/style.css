@@ -63,13 +63,15 @@ p {
 }
 
 .card{
-    height: 220px;
-    width: 250px;
+    height: 250px;
+    width: 280px;
     border: 2px solid white;
     border-radius: 10px;
     background-color: rgb(57, 57, 61);
     box-shadow: -3px 5px 6px 2px rgba(1, 10, 10, 0.4);
     padding: 5px;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .atividades{
@@ -79,4 +81,41 @@ p {
     grid-template-columns :repeat(auto-fit, minmax(250px, 1fr));
     
     grid-gap: 15px;
+}
+
+.card-buttons{
+    display: flex;
+    float: right;
+    margin-top: 75%;
+}
+
+.editar {
+    margin-right: 10px;
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Cor do texto em branco */
+    border: none; /* Sem borda */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Ícone de cursor de mão ao passar o mouse */
+    font-weight: bold;
+  }
+  
+  /* Estilize o botão de edição quando o mouse passar por cima */
+  .editar:hover {
+    background-color: #0056b3; /* Tom mais escuro de azul */
+  }
+
+.excluir {
+    font-weight: bold;
+    background-color: #d14f4f; /* Vermelho */
+    color: #fff; /* Cor do texto em branco */
+    border: none; /* Sem borda */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Ícone de cursor de mão ao passar o mouse */
+}
+
+/* Estilize o botão de excluir quando o mouse passar por cima */
+.excluir:hover {
+    background-color: #ff3333; /* Tom mais escuro de vermelho */
 }

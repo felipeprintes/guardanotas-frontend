@@ -4,12 +4,10 @@ import {useState} from 'react'
 function TextField(){
 
     const [texto, setTexto] = useState('');
-    // const [atividade, setAtividade] = useState(''); // Estado para armazenar a atividade digitada
     const [atividades, setAtividades] = useState([]); // Estado para armazenar a lista de atividades
 
     const activity = (evento) =>{
         evento.preventDefault()
-        // setAtividade(evento.target[0].value)
         const conteudo = evento.target[0].value
         if(conteudo !== ''){
             setAtividades([...atividades,conteudo])
@@ -23,7 +21,6 @@ function TextField(){
         }
       };
 
-    // const [textoDigitado, setTextoDigitado] = useState('')
     return (
         <div className="writeArea">
             <form onSubmit={activity}>
@@ -43,12 +40,13 @@ function TextField(){
                 {atividades.map((item, index) => (
                     <div key={index} className='card'>
                         {item}
-                        {console.log(item)}
+                        <div className='card-buttons'>
+                            <button className='editar'>Editar</button>
+                            <button className='excluir'>Excluir</button>
+                        </div>
                     </div>
                 ))}
             </div>
-
-
         </div>
     )
 }
