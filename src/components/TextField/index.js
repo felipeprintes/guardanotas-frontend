@@ -1,11 +1,24 @@
 import './style.css'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 function TextField(){
 
     const [texto, setTexto] = useState('');
     const [atividades, setAtividades] = useState([]); // Estado para armazenar a lista de atividades
+    const [notes, setNotes] = useState([]);
     const limitText = 220
+    
+    const endpoint = 'http://localhost:5001/my_notes'
+    // const endpoint = 'http://192.168.0.34:5001/my_notes'
+    // const endpoint = 'https://jsonplaceholder.typicode.com/posts/1';
+
+    useEffect(()=>{
+        //Faz a requisição para api
+        fetch(endpoint)
+            .then(response => response.json())
+            .then(data => { setNotes(data)} )
+            .catch(error => { console.error('Erro ao buscar dados da api: ', error) })
+    }, [])
 
     const activity = (evento) =>{
         evento.preventDefault()
@@ -39,9 +52,9 @@ function TextField(){
             </form>
             
             <div className='atividades'>
-                {atividades.map((item, index) => (
+                {notes.map((note, index) => (
                     <div key={index} className='card'>
-                        <p className='atividades-conteudo'>{item}</p>
+                        <p className='atividades-conteudo'>{note.note_content}</p>
                         <div className='card-buttons'>
                             <button className='editar'>Editar</button>
                             <button className='excluir'>Excluir</button>
@@ -49,6 +62,7 @@ function TextField(){
                     </div>
                 ))}
             </div>
+
         </div>
     )
 }
