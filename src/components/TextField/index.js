@@ -60,10 +60,22 @@ function TextField(){
             setShowSuccessMessage(true);
             setTimeout(() => {
                 setShowSuccessMessage(false);
-              }, 2000);
-        }, 2000)        
+              }, 1000);
+        }, 1000)        
         
     }
+    const [cards, setCards] = useState([]);
+    
+    // const handleDeleteCard = (deletedCardId) => {
+    //     // Remove o card da lista de cards
+    //     setCards((prevCards) => prevCards.filter((note) => note._id !== deletedCardId));
+    //   };
+
+    const handleDeleteCard = () => {
+        // Remove o card da lista de cards
+        // setCards((prevCards) => prevCards.filter((note) => note._id !== deletedCardId));
+        getActivity();
+      };
 
     const handleChange = (e) => {
         // Atualiza o estado com o texto digitado
@@ -102,7 +114,7 @@ function TextField(){
                         <p className='atividades-conteudo'>{note.note_content}</p>
                         <div className='card-buttons'>
                             <button className='editar'>Editar</button>
-                            <Card key={note._id} note={note}/>
+                            <Card key={note._id} note={note} onDelete={handleDeleteCard}/>
                             {/* <button className='excluir' onClick={handleDelete}>Excluir</button> */}
                         </div>
                     </div>

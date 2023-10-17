@@ -11,12 +11,13 @@ function Card({note, onDelete}) {
                 content: note.note_content
             })
         }).then(response => response.json())
-        .then((data) => {
-            console.log('Card excluído com sucesso', data)
-        }).catch((error) => {
+          .then((data) => {
+            onDelete(note._id)
+          })
+          .catch((error) => {
             console.error('Erro ao excluir o card', error)
         })
-    
+        
     }
 
     return (
