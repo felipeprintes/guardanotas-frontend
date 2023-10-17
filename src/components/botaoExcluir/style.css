@@ -1,0 +1,14 @@
+.excluir {
+    font-weight: bold;
+    background-color: #d14f4f; /* Vermelho */
+    color: #fff; /* Cor do texto em branco */
+    border: none; /* Sem borda */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Ícone de cursor de mão ao passar o mouse */
+}
+
+/* Estilize o botão de excluir quando o mouse passar por cima */
+.excluir:hover {
+    background-color: #ff3333; /* Tom mais escuro de vermelho */
+}

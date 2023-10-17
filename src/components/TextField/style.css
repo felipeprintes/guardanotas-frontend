@@ -88,6 +88,7 @@ p {
 
 .card-buttons{
     float: right;
+    display: flex;
 }
 
 .editar {
@@ -106,17 +107,34 @@ p {
     background-color: #0056b3; /* Tom mais escuro de azul */
   }
 
-.excluir {
-    font-weight: bold;
-    background-color: #d14f4f; /* Vermelho */
-    color: #fff; /* Cor do texto em branco */
-    border: none; /* Sem borda */
-    padding: 5px 10px; /* Espaçamento interno */
-    border-radius: 4px; /* Cantos arredondados */
-    cursor: pointer; /* Ícone de cursor de mão ao passar o mouse */
+
+
+
+.loading-container{
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.834);
+    /* z-index: 1; */
 }
 
-/* Estilize o botão de excluir quando o mouse passar por cima */
-.excluir:hover {
-    background-color: #ff3333; /* Tom mais escuro de vermelho */
+.spinner{
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #3d5af1 transparent #3d5af1 transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
