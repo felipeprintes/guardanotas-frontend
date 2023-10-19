@@ -1,6 +1,7 @@
 import './style.css'
 import {useState, useEffect} from 'react'
 import Card from '../botaoExcluir'
+import CardEditTest from '../edit_teste';
 
 function TextField(){
 
@@ -65,15 +66,8 @@ function TextField(){
         
     }
     const [cards, setCards] = useState([]);
-    
-    // const handleDeleteCard = (deletedCardId) => {
-    //     // Remove o card da lista de cards
-    //     setCards((prevCards) => prevCards.filter((note) => note._id !== deletedCardId));
-    //   };
 
     const handleDeleteCard = () => {
-        // Remove o card da lista de cards
-        // setCards((prevCards) => prevCards.filter((note) => note._id !== deletedCardId));
         getActivity();
       };
 
@@ -115,6 +109,7 @@ function TextField(){
                         <div className='card-buttons'>
                             <button className='editar'>Editar</button>
                             <Card key={note._id} note={note} onDelete={handleDeleteCard}/>
+                            {/* <CardEditTest key={note._id} note={note}/> */}
                             {/* <button className='excluir' onClick={handleDelete}>Excluir</button> */}
                         </div>
                     </div>
