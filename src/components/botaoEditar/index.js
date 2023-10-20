@@ -41,7 +41,9 @@ return (
     <div className='edit'>
       {isEditing ? (
         <div className="editing-screen">
+          
           <div className="edit-card">
+          <h1>Edite seu card</h1>
             <textarea
               value={editedContent}
               onChange={(e) => setEditedContent(e.target.value)}
