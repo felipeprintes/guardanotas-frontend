@@ -1,0 +1,69 @@
+.editing-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea{
+width: 80%;
+height: 350px;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;
+font-size: 14px;
+resize: none;
+}
+
+.edit-card {
+  background-color: rgb(50, 49, 49);
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttonAreas{
+display: flex;
+margin-top: 10px;
+}
+
+.editar {
+  margin-right: 10px;
+  background-color: #007bff; /* Azul */
+  color: #fff; /* Cor do texto em branco */
+  border: none; /* Sem borda */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 4px; /* Cantos arredondados */
+  cursor: pointer; /* Ícone de cursor de mão ao passar o mouse */
+  font-weight: bold;
+}
+
+/* Estilize o botão de edição quando o mouse passar por cima */
+.editar:hover {
+  background-color: #0056b3; /* Tom mais escuro de azul */
+}
+.cancelar{
+font-weight: bold;
+  background-color: #d14f4f; /* Vermelho */
+  color: #fff; /* Cor do texto em branco */
+  border: none; /* Sem borda */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 4px; /* Cantos arredondados */
+  cursor: pointer; /* Ícone de cursor de mão ao passar o mouse */
+}
+
+.cancelar:hover{
+background-color: #ff3333; /* Tom mais escuro de vermelho */
+}

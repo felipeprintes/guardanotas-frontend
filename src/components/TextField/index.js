@@ -1,7 +1,7 @@
 import './style.css'
 import {useState, useEffect} from 'react'
 import Card from '../botaoExcluir'
-import CardEditTest from '../edit_teste';
+import CardEdit from '../botaoEditar';
 
 function TextField(){
 
@@ -107,9 +107,9 @@ function TextField(){
                     <div key={index} className='card'>
                         <p className='atividades-conteudo'>{note.note_content}</p>
                         <div className='card-buttons'>
-                            <button className='editar'>Editar</button>
+                            {/* <button className='editar'>Editar</button> */}
                             <Card key={note._id} note={note} onDelete={handleDeleteCard}/>
-                            {/* <CardEditTest key={note._id} note={note}/> */}
+                            <CardEdit key={note._id} note={note}/>
                             {/* <button className='excluir' onClick={handleDelete}>Excluir</button> */}
                         </div>
                     </div>
