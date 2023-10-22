@@ -4,7 +4,6 @@ import './style.css'
 function CardEdit({ note, onEdit }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editedContent, setEditedContent] = useState(note.note_content);
-  const [msg, setMsg] = useState("");
 
   const handleEditClick = () => {
     setIsEditing(true);

@@ -65,7 +65,7 @@ function TextField(){
         }, 1000)        
         
     }
-    const [cards, setCards] = useState([]);
+    // const [cards, setCards] = useState([]);
 
     const handleDeleteCard = () => {
         getActivity();
@@ -111,8 +111,8 @@ function TextField(){
                     <div key={index} className='card'>
                         <p className='atividades-conteudo'>{note.note_content}</p>
                         <div className='card-buttons'>
-                            <CardExclude key={note._id} note={note} onDelete={handleDeleteCard}/>
                             <CardEdit key={note._id} note={note} onEdit={handleEditCard}/>
+                            <CardExclude key={note._id} note={note} onDelete={handleDeleteCard}/>
                         </div>
                     </div>
                 ))}
