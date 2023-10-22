@@ -1,6 +1,6 @@
 import './style.css'
 import {useState, useEffect} from 'react'
-import Card from '../botaoExcluir'
+import CardExclude from '../botaoExcluir'
 import CardEdit from '../botaoEditar';
 
 function TextField(){
@@ -70,6 +70,10 @@ function TextField(){
     const handleDeleteCard = () => {
         getActivity();
       };
+    
+      const handleEditCard = () => {
+        getActivity();
+      }
 
     const handleChange = (e) => {
         // Atualiza o estado com o texto digitado
@@ -107,10 +111,8 @@ function TextField(){
                     <div key={index} className='card'>
                         <p className='atividades-conteudo'>{note.note_content}</p>
                         <div className='card-buttons'>
-                            {/* <button className='editar'>Editar</button> */}
-                            <Card key={note._id} note={note} onDelete={handleDeleteCard}/>
-                            <CardEdit key={note._id} note={note}/>
-                            {/* <button className='excluir' onClick={handleDelete}>Excluir</button> */}
+                            <CardExclude key={note._id} note={note} onDelete={handleDeleteCard}/>
+                            <CardEdit key={note._id} note={note} onEdit={handleEditCard}/>
                         </div>
                     </div>
                 ))}

@@ -91,21 +91,7 @@ p {
     display: flex;
 }
 
-.editar {
-    margin-right: 10px;
-    background-color: #007bff; /* Azul */
-    color: #fff; /* Cor do texto em branco */
-    border: none; /* Sem borda */
-    padding: 5px 10px; /* Espaçamento interno */
-    border-radius: 4px; /* Cantos arredondados */
-    cursor: pointer; /* Ícone de cursor de mão ao passar o mouse */
-    font-weight: bold;
-  }
-  
-  /* Estilize o botão de edição quando o mouse passar por cima */
-  .editar:hover {
-    background-color: #0056b3; /* Tom mais escuro de azul */
-  }
+
 
 
 

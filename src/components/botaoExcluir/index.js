@@ -1,6 +1,6 @@
 import './style.css' 
 
-function Card({note, onDelete}) {
+function CardExclude({note, onDelete}) {
     const handleDeleteClick = (e) => {
         console.log('ID: ', note._id)
         console.log('NOTE_CONTENT: ', note.note_content)
@@ -22,11 +22,9 @@ function Card({note, onDelete}) {
 
     return (
         <div>
-            {/* <p>ID do Card: {card._id}</p> */}
-            {/* <p>Conteúdo do Card: {card.content}</p> */}
             <button onClick={handleDeleteClick} className='excluir'>Excluir</button>
         </div>
     )
 }
 
-export default Card
+export default CardExclude
